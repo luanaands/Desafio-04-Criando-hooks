@@ -39,7 +39,7 @@ describe('Cart Page', () => {
     const { getAllByTestId, rerender } = render(<Cart />);
 
     const [incrementFirstProduct] = getAllByTestId('increment-product');
-    const [, decrementSecondProduct] = getAllByTestId('decrement-product');
+    const [decrementSecondProduct] = getAllByTestId('decrement-product');
     const [firstProductAmount, secondProductAmount] = getAllByTestId(
       'product-amount'
     );
