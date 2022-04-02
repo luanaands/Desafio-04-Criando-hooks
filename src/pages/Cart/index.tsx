@@ -48,13 +48,13 @@ const Cart = (): JSX.Element => {
 
   function handleProductIncrement(product: Product) {
     let update : UpdateProductAmount
-    update = { productId: product.id, amount: product.amount}
+    update = { productId: product.id, amount: (product.amount+1)}
     updateProductAmount(update);
   }
 
   function handleProductDecrement(product: Product) {
     let update : UpdateProductAmount
-    update = { productId: product.id, amount: product.amount}
+    update = { productId: product.id, amount: (product.amount-1)}
     updateProductAmount(update);
   }
 
@@ -99,7 +99,7 @@ const Cart = (): JSX.Element => {
                   type="text"
                   data-testid="product-amount"
                   readOnly
-                  value={2}
+                  value={cart.amount}
                 />
                 <button
                   type="button"
